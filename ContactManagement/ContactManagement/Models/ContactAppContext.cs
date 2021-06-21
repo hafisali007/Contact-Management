@@ -8,10 +8,11 @@ namespace ContactManagement.Models
 {
     public class ContactAppContext:DbContext
     {
-        public ContactAppContext(DbContextOptions<ContactAppContext> options)
+        public ContactAppContext(DbContextOptions options)
               : base(options)
         {
         }
+
 
         public DbSet<Contact> Contact { get; set; }
     }
