@@ -26,7 +26,7 @@ namespace ContactManagement.Controllers.Api
             public IEnumerable<Contact> GetAll()
             {
                 // fetch all contact records 
-                return _context.Contact.ToList();
+                return _context.Contacts.ToList();
             }
 
             [HttpGet("{id}")]
@@ -34,7 +34,7 @@ namespace ContactManagement.Controllers.Api
             public IActionResult GetById(long id)
             {
                 // filter contact records by contact id
-                var item = _context.Contact.FirstOrDefault(t => t.id == id);
+                var item = _context.Contacts.FirstOrDefault(t => t.Id == id);
                 if (item == null)
                 {
                     return NotFound();
@@ -50,13 +50,13 @@ namespace ContactManagement.Controllers.Api
                 {
                     return BadRequest();
                 }
-                _context.Contact.Add(new Contact
+                _context.Contacts.Add(new Contact
                 {
-                    firstName = item.firstName,
-                    lastName = item.lastName,
-                    email = item.email,
-                    phoneNumber = item.phoneNumber,
-                    status = item.status
+                    FirstName = item.FirstName,
+                    LastName = item.LastName,
+                    Email = item.Email,
+                    PhoneNumber = item.PhoneNumber,
+                    Status = item.Status
                 });
                 _context.SaveChanges();
 
@@ -73,19 +73,19 @@ namespace ContactManagement.Controllers.Api
                     return BadRequest();
                 }
 
-                var contact = _context.Contact.FirstOrDefault(t => t.id == id);
+                var contact = _context.Contacts.FirstOrDefault(t => t.Id == id);
                 if (contact == null)
                 {
                     return NotFound();
                 }
 
-                contact.firstName = item.firstName;
-                contact.lastName = item.lastName;
-            contact.email = item.email;
-                contact.phoneNumber = item.phoneNumber;
-                contact.status = item.status;
+                contact.FirstName = item.FirstName;
+                contact.LastName = item.LastName;
+                contact.Email = item.Email;
+                contact.PhoneNumber = item.PhoneNumber;
+                contact.Status = item.Status;
 
-                _context.Contact.Update(contact);
+                _context.Contacts.Update(contact);
                 _context.SaveChanges();
                 return Ok(new { message = "Contact is updated successfully." });
             }
@@ -95,13 +95,13 @@ namespace ContactManagement.Controllers.Api
             [Route("deleteContact")]
             public IActionResult Delete(long id)
             {
-                var contact = _context.Contact.FirstOrDefault(t => t.id == id);
+                var contact = _context.Contacts.FirstOrDefault(t => t.Id == id);
                 if (contact == null)
                 {
                     return NotFound();
                 }
 
-                _context.Contact.Remove(contact);
+                _context.Contacts.Remove(contact);
                 _context.SaveChanges();
                 return Ok(new { message = "Contact is deleted successfully." });
             }
@@ -110,20 +110,20 @@ namespace ContactManagement.Controllers.Api
         [Route("statusContact")]
         public IActionResult Status(long id, [FromBody] Contact item)
         {
-            var contact = _context.Contact.FirstOrDefault(t => t.id == id);
+            var contact = _context.Contacts.FirstOrDefault(t => t.Id == id);
             if (contact == null)
             {
                 return NotFound();
             }
-            if(item.status == status.Active)
+            if(item.Status == status.Active)
             {
-                contact.status = status.Inactive;
+                contact.Status = status.Inactive;
             }
             else
             {
-                contact.status = status.Active;
+                contact.Status = status.Active;
             }
-            _context.Contact.Update(contact);
+            _context.Contacts.Update(contact);
             _context.SaveChanges();
             return Ok(new { message = "Contact Status changed successfully." });
         }

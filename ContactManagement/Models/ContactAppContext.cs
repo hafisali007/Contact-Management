@@ -14,6 +14,7 @@ namespace ContactManagement.Models
         }
 
 
-        public DbSet<Contact> Contact { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
     }
-}
+
+   }

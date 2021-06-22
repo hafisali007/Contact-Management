@@ -9,21 +9,21 @@ namespace ContactManagement.Models
     public class Contact
     {
         [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
 
         [StringLength(150)]
-        public string firstName { get; set; }
+        public string FirstName { get; set; }
 
         [StringLength(100)]
-        public string lastName { get; set; }
+        public string LastName { get; set; }
 
         [StringLength(150)]
-        public string email { get; set; }
+        public string Email { get; set; }
 
         [StringLength(15)]
-        public string phoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
 
-        public status status { get; set; }
+        public status Status { get; set; }
     }
 
     public enum status {

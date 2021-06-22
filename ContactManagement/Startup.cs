@@ -28,7 +28,15 @@ namespace ContactManagement
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ContactAppContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:ContactDB"]));
+            services.AddDbContext<ContactAppContext>(opts => opts.
+            UseSqlServer(Configuration["ConnectionString:ContactDB"],
+            sqlServerOptionsAction: sqlOptions =>
+            {
+                sqlOptions.EnableRetryOnFailure(
+                    maxRetryCount: 10,
+                    maxRetryDelay: TimeSpan.FromSeconds(5),
+                    errorNumbersToAdd: null);
+            }));
             services.AddControllers();
             services.AddMvc();
         }
