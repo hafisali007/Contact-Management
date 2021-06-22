@@ -37,6 +37,7 @@ namespace ContactManagement
                     maxRetryDelay: TimeSpan.FromSeconds(5),
                     errorNumbersToAdd: null);
             }));
+            services.AddControllersWithViews();
             services.AddControllers();
             services.AddMvc();
         }
