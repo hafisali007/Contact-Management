@@ -1,36 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Personal\\Contact-Management\\ContactManagement\\ContactManagement.csproj": {}
+    "E:\\Project\\Contact-Management\\Contact-Management\\ContactManagement\\ContactManagement.csproj": {}
   },
   "projects": {
-    "E:\\Personal\\Contact-Management\\ContactManagement\\ContactManagement.csproj": {
+    "E:\\Project\\Contact-Management\\Contact-Management\\ContactManagement\\ContactManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Personal\\Contact-Management\\ContactManagement\\ContactManagement.csproj",
+        "projectUniqueName": "E:\\Project\\Contact-Management\\Contact-Management\\ContactManagement\\ContactManagement.csproj",
         "projectName": "ContactManagement",
-        "projectPath": "E:\\Personal\\Contact-Management\\ContactManagement\\ContactManagement.csproj",
-        "packagesPath": "C:\\Users\\z820pc2\\.nuget\\packages\\",
-        "outputPath": "E:\\Personal\\Contact-Management\\ContactManagement\\obj\\",
+        "projectPath": "E:\\Project\\Contact-Management\\Contact-Management\\ContactManagement\\ContactManagement.csproj",
+        "packagesPath": "C:\\Users\\GR\\.nuget\\packages\\",
+        "outputPath": "E:\\Project\\Contact-Management\\Contact-Management\\ContactManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\z820pc2\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\GR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\z820pc2\\AppData\\Local\\Esri\\NuGet": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -48,6 +44,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.7, )"
@@ -65,10 +65,6 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.5, )"
-            },
-            "System.Linq.Dynamic": {
-              "target": "Package",
-              "version": "[1.0.8, )"
             },
             "jquery.datatables": {
               "target": "Package",

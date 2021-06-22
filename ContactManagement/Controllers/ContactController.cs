@@ -7,6 +7,7 @@ using ContactManagement.Models;
 using System.Net.Http;
 using Newtonsoft.Json;
 using ContactManagement.Controllers.Api;
+using System.Text;
 
 namespace ContactManagement.Controllers
 {
@@ -41,10 +42,33 @@ namespace ContactManagement.Controllers
             return View(_model);
 
         }
-        public IActionResult Create()
-        {
-            return View(new Contact());
 
+       
+        public IActionResult Create()
+        {           
+            return View();
+        }
+
+
+        [HttpPost]
+        public async Task<ActionResult> create(Contact contacts)
+        {
+            using (var client = new HttpClient())
+            {
+                var request = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
+                client.BaseAddress = new Uri(request + "/api/");
+
+              
+                var postTask = await client.PostAsync("contactapi/addContact", new StringContent(JsonConvert.SerializeObject(contacts), Encoding.UTF8, "application/json"));             
+                var result =postTask.EnsureSuccessStatusCode();             
+              
+                if (result.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("Index");
+                }
+            }          
+
+            return View(contacts);
         }
 
 

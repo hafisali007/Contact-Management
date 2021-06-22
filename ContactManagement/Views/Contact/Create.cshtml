@@ -4,50 +4,65 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
 
-<h4>Contact</h4>
+<h4>Create Contact</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    @using (Html.BeginForm("Create", "Contact", FormMethod.Post))
+    {
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                @Html.LabelFor(model => model.FirstName, new { @class = "control-label" })
-                @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FirstName, new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", tabindex = 1 })
+                    @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.Email, new { @class = "form-control", tabindex = 3 })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Status, new { @class = "control-label" })
+                    @Html.DropDownListFor(model => model.Status, new List<SelectListItem>
+                      { new SelectListItem{Text="Valid", Value="0"},
+                        new SelectListItem{Text="Invalid", Value="1"}}, "-- Select Status--", new { @class = "form-control", tabindex = 5 })                   
+                    @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="LastName" class="control-label"></label>
-                <input asp-for="LastName" class="form-control" />
-                <span asp-validation-for="LastName" class="text-danger"></span>
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.LastName, new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.LastName, new { @class = "form-control", tabindex = 2 })
+                    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PhoneNumber, new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control", tabindex = 4 })
+                    @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                </div>
+
             </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PhoneNumber" class="control-label"></label>
-                <input asp-for="PhoneNumber" class="form-control" />
-                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Status" class="control-label"></label>
-                <select asp-for="Status" class="form-control"></select>
-                <span asp-validation-for="Status" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+
+            <div class="col-xs-3">
+                <button type="submit" value="Submit" class="btn btn-primary float-right">
+                    Create
+                </button>
             </div>
         </form>
-    </div>
+    }
 </div>
 
+
 <div>
-    <a asp-action="Index">Back to List</a>
+    @Html.ActionLink("Back to List", "Index")
 </div>
 
 @section Scripts {
+    <link rel="stylesheet" href="~/css/site.css" />
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
