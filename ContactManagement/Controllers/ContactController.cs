@@ -22,7 +22,7 @@ namespace ContactManagement.Controllers
 
                 client.BaseAddress = new Uri(request + "/api/");
 
-                var responseTask = client.GetAsync("contact/getAllContact");
+                var responseTask = client.GetAsync("contactapi/getAllContact");
                 responseTask.Wait();
 
 

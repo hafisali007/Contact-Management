@@ -56,6 +56,14 @@ namespace ContactManagement
                 app.UseHsts();
             }
 
+            app.UseStaticFiles();
+            app.UseCors(options =>
+            {
+                options.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+            });
+         
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -64,15 +72,15 @@ namespace ContactManagement
 
             app.UseEndpoints(endpoints =>
             {
+                //endpoints.MapControllerRoute(
+                //   name: "default",
+                //   pattern: "{controller=Demo}/{action=ShowGrid}/{id?}");
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Contact}/{action=Index}/{id?}");
             });
 
-            app.Use(async (context, next) => {
-                //Do what you want with context,which is HttpContext
-                await next.Invoke();
-            });
+           
 
         }
     }

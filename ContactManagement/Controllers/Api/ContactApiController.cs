@@ -10,13 +10,13 @@ namespace ContactManagement.Controllers.Api
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ContactController : ControllerBase
+    public class ContactApiController : ControllerBase
     {
       
             private readonly ContactAppContext _context;
 
             // initiate database context
-            public ContactController(ContactAppContext context)
+            public ContactApiController(ContactAppContext context)
             {
                 _context = context;
             }
