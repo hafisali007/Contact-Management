@@ -21,7 +21,7 @@ namespace ContactManagement.Controllers
                 var request = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
 
                 client.BaseAddress = new Uri(request + "/api/");
-            
+
                 var responseTask = client.GetAsync("contact/getAllContact");
                 responseTask.Wait();
 
@@ -33,15 +33,20 @@ namespace ContactManagement.Controllers
                     var value = JsonConvert.DeserializeObject<IList<Contact>>(readTask);
                     _model = value;
                 }
-                else 
+                else
                 {
                     _model = Enumerable.Empty<Contact>();
                 }
             }
             return View(_model);
-           
+
+        }
+        public IActionResult Create()
+        {
+            return View(new Contact());
+
         }
 
-       
+
     }
 }

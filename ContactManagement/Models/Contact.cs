@@ -12,15 +12,18 @@ namespace ContactManagement.Models
         public int Id { get; set; }
 
         [StringLength(150)]
+        [Required(ErrorMessage = "")]
         public string FirstName { get; set; }
 
         [StringLength(100)]
         public string LastName { get; set; }
 
         [StringLength(150)]
+        [Required(ErrorMessage = "")]
         public string Email { get; set; }
 
         [StringLength(15)]
+        [Required(ErrorMessage = "Please enter phone number")]
         public string PhoneNumber { get; set; }
 
         public status Status { get; set; }
