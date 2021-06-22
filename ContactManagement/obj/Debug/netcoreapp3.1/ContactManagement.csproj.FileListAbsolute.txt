@@ -283,3 +283,4 @@ E:\Personal\Contact-Management\ContactManagement\obj\Debug\netcoreapp3.1\Contact
 E:\Personal\Contact-Management\ContactManagement\obj\Debug\netcoreapp3.1\ContactManagement.dll
 E:\Personal\Contact-Management\ContactManagement\obj\Debug\netcoreapp3.1\ContactManagement.pdb
 E:\Personal\Contact-Management\ContactManagement\obj\Debug\netcoreapp3.1\ContactManagement.genruntimeconfig.cache
+E:\Personal\Contact-Management\ContactManagement\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs

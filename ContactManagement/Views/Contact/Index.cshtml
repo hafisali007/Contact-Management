@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<ContactManagement.Models.Contact>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Contact List";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -33,7 +33,7 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
+        <tr class="col-sm-12">
             <td>
                 @Html.DisplayFor(modelItem => item.FirstName)
             </td>

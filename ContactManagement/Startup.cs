@@ -68,6 +68,12 @@ namespace ContactManagement
                     name: "default",
                     pattern: "{controller=Contact}/{action=Index}/{id?}");
             });
+
+            app.Use(async (context, next) => {
+                //Do what you want with context,which is HttpContext
+                await next.Invoke();
+            });
+
         }
     }
 }
