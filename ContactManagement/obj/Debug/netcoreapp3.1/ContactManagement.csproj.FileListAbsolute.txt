@@ -210,7 +210,6 @@ E:\Project\Contact-Management\Contact-Management\ContactManagement\bin\Debug\net
 E:\Project\Contact-Management\Contact-Management\ContactManagement\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 E:\Project\Contact-Management\Contact-Management\ContactManagement\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 E:\Project\Contact-Management\Contact-Management\ContactManagement\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-E:\Project\Contact-Management\Contact-Management\ContactManagement\bin\Debug\netcoreapp3.1\System.Linq.Dynamic.dll
 E:\Project\Contact-Management\Contact-Management\ContactManagement\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
 E:\Project\Contact-Management\Contact-Management\ContactManagement\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 E:\Project\Contact-Management\Contact-Management\ContactManagement\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
@@ -292,7 +291,6 @@ E:\Project\Contact-Management\Contact-Management\ContactManagement\obj\Debug\net
 E:\Project\Contact-Management\Contact-Management\ContactManagement\obj\Debug\netcoreapp3.1\ContactManagement.RazorCoreGenerate.cache
 E:\Project\Contact-Management\Contact-Management\ContactManagement\obj\Debug\netcoreapp3.1\Razor\Views\Contact\Create.cshtml.g.cs
 E:\Project\Contact-Management\Contact-Management\ContactManagement\obj\Debug\netcoreapp3.1\Razor\Views\Contact\Index.cshtml.g.cs
-E:\Project\Contact-Management\Contact-Management\ContactManagement\obj\Debug\netcoreapp3.1\Razor\Views\Demo\ShowGrid.cshtml.g.cs
 E:\Project\Contact-Management\Contact-Management\ContactManagement\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 E:\Project\Contact-Management\Contact-Management\ContactManagement\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 E:\Project\Contact-Management\Contact-Management\ContactManagement\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs

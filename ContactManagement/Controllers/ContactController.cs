@@ -57,7 +57,6 @@ namespace ContactManagement.Controllers
             {
                 var request = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
                 client.BaseAddress = new Uri(request + "/api/");
-
               
                 var postTask = await client.PostAsync("contactapi/addContact", new StringContent(JsonConvert.SerializeObject(contacts), Encoding.UTF8, "application/json"));             
                 var result =postTask.EnsureSuccessStatusCode();             
@@ -69,6 +68,28 @@ namespace ContactManagement.Controllers
             }          
 
             return View(contacts);
+        }
+
+       [HttpDelete]
+        public ActionResult Delete(int id)
+        {
+            using (var client = new HttpClient())
+            {
+                var request = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
+                client.BaseAddress = new Uri(request + "/api/");
+
+                var deleteTask = client.DeleteAsync("contactapi/deleteContact" + id.ToString());
+                deleteTask.Wait();
+
+                var result = deleteTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+
+                    return RedirectToAction("Index");
+                }
+            }
+
+            return RedirectToAction("Index");
         }
 
 

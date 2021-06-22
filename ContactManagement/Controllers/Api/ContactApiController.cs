@@ -31,7 +31,7 @@ namespace ContactManagement.Controllers.Api
 
             [HttpGet("{id}")]
             [Route("getContact")]
-            public IActionResult GetById(long id)
+            public IActionResult GetById(int id)
             {
                 // filter contact records by contact id
                 var item = _context.Contacts.FirstOrDefault(t => t.Id == id);
@@ -65,7 +65,7 @@ namespace ContactManagement.Controllers.Api
 
             [HttpPut("{id}")]
             [Route("updateContact")]
-            public IActionResult Update(long id, [FromBody] Contact item)
+            public IActionResult Update(int id, [FromBody] Contact item)
             {
                 // set bad request if contact data is not provided in body
                 if (item == null || id == 0)
@@ -93,7 +93,7 @@ namespace ContactManagement.Controllers.Api
 
             [HttpDelete("{id}")]
             [Route("deleteContact")]
-            public IActionResult Delete(long id)
+            public IActionResult Delete(int id)
             {
                 var contact = _context.Contacts.FirstOrDefault(t => t.Id == id);
                 if (contact == null)
@@ -108,7 +108,7 @@ namespace ContactManagement.Controllers.Api
 
         [HttpDelete("{id}")]
         [Route("statusContact")]
-        public IActionResult Status(long id, [FromBody] Contact item)
+        public IActionResult Status(int id, [FromBody] Contact item)
         {
             var contact = _context.Contacts.FirstOrDefault(t => t.Id == id);
             if (contact == null)
