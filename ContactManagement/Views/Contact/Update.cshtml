@@ -1,16 +1,15 @@
 ﻿@model ContactManagement.Models.Contact
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Update Contact";
 }
 
-
-<h4>Create Contact</h4>
+<h4>Update Contact</h4>
 <hr />
 <div>
-    @using (Html.BeginForm("Create", "Contact", FormMethod.Post))
+    @using (Html.BeginForm("Update", "Contact", FormMethod.Post))
     {
-        <form class="row" asp-action="Create">
+        <form class="row" asp-action="Update">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="col-md-6">
                 <div class="form-group">
@@ -28,8 +27,8 @@
                 <div class="form-group">
                     @Html.LabelFor(model => model.Status, new { @class = "control-label" })
                     @Html.DropDownListFor(model => model.Status, new List<SelectListItem>
-                      { new SelectListItem{Text="Active", Value="0"},
-                        new SelectListItem{Text="Inactive", Value="1"}}, "-- Select Status--", new { @class = "form-control", tabindex = 5 })                   
+                          { new SelectListItem{Text="Active", Value="0"},
+                        new SelectListItem{Text="Inactive", Value="1"}}, "-- Select Status--", new { @class = "form-control", tabindex = 5 })
                     @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -50,19 +49,20 @@
 
             <div class="col-xs-3">
                 <button type="submit" value="Submit" class="btn btn-primary float-right">
-                    Create
+                    Update
                 </button>
             </div>
         </form>
     }
 </div>
 
-
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
 
 @section Scripts {
     <link rel="stylesheet" href="~/css/site.css" />
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+

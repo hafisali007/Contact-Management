@@ -22,8 +22,8 @@ namespace ContactManagement.Models
 
         [StringLength(150)]
         [Required(ErrorMessage = "Please enter email")]
-        [EmailAddress(ErrorMessage = "Please enter valid email")]
-        [DataType(DataType.EmailAddress)]
+        //[EmailAddress(ErrorMessage = "Please enter valid email")]
+        [DataType(DataType.EmailAddress,ErrorMessage = "Please enter valid email")]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
