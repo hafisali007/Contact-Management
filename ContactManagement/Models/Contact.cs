@@ -23,7 +23,7 @@ namespace ContactManagement.Models
         [StringLength(150)]
         [Required(ErrorMessage = "Please enter email")]
         [EmailAddress(ErrorMessage = "Please enter valid email")]
-        [DataType(DataType.EmailAddress]
+        [DataType(DataType.EmailAddress)]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
