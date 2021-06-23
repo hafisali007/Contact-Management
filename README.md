@@ -62,6 +62,6 @@ Microsoft.EntityFrameworkCore.Tools
 #### Deploy/host a application with Visual Studio to Azure web apps.
 
 ### ScreenShots
-![Alt text](https://contactmanagementevo.file.core.windows.net/contact/ContactList.png "Contact List")
+![ScreenShot](https://contactmanagementevo.file.core.windows.net/contact/ContactList.png)
 
-![Alt text](https://contactmanagementevo.file.core.windows.net/contact/ContactActions.png "Contact Form")
+![ScreenShot](https://contactmanagementevo.file.core.windows.net/contact/ContactActions.png)
