@@ -47,19 +47,19 @@ Microsoft.EntityFrameworkCore.Tools
 	
 ### Step By Step Methods:
 
-#### Create Contact Application using ASP.NET Core Web API and develop the Web API for contact CRUD operations.
+#### * Create Contact Application using ASP.NET Core Web API and develop the Web API for contact CRUD operations.
 
-#### Use of Code first Database Approach and migrate Datas to SQL Server and later use of Azure Sql server for deploy process.
+#### * Use of Code first Database Approach and migrate Datas to SQL Server and later use of Azure Sql server for deploy process.
 
-#### Create MVC Controller connect with API Controller for implementing and consuming APIs.
+#### * Create MVC Controller connect with API Controller for implementing and consuming APIs.
 
-#### Create Views from Controller to implement UI.
+#### * Create Views from Controller to implement UI.
 
-#### Develop the contact form & list component using Bootstrap Style that will consume Web API which we have created in above
+#### * Develop the contact form & list component using Bootstrap Style that will consume Web API which we have created in above
 
-#### Continuoes Integration done to git by commiting changes in codes.
+#### * Continuoes Integration done to git by commiting changes in codes.
 
-#### Deploy/host a application with Visual Studio to Azure web apps.
+#### * Deploy/host a application with Visual Studio to Azure web apps.
 
 ### ScreenShots
 ![ScreenShot](https://contactmanagementevo.file.core.windows.net/contact/ContactList.png)
