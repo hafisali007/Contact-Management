@@ -1,6 +1,7 @@
-# Contact Management Application
+# Contact Management CRUD Application
 
 Contact Management Application is a production ready application for maintaining contact information using ASP.NET Core Web API 3.1, Bootstrap and Visual Studio. 
+Create, Update and Delete Users and Fetch API to view Data using Fiddler or PostMan API
 
 ## Visual Code
 
