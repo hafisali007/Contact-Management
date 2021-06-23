@@ -2,6 +2,7 @@
   "dependencies": {
     "mssql1": {
       "restored": true,
+<<<<<<< HEAD
       "restoreTime": "2021-06-23T11:40:14.9037337Z"
     }
   },
@@ -11,10 +12,24 @@
       "Type": "subscription",
       "Value": "aeb89abb-f457-4878-a60e-2106c2ba1184"
     },
+=======
+      "restoreTime": "2021-06-23T12:07:06.9167026Z"
+    }
+  },
+  "parameters": {
+>>>>>>> 307f42177efdbf0a45719e9999af8ed1c6080454
     "mssql1.resourceGroupName": {
       "Name": "mssql1.resourceGroupName",
       "Type": "resourceGroup",
       "Value": "AzureDB"
+<<<<<<< HEAD
+=======
+    },
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "aeb89abb-f457-4878-a60e-2106c2ba1184"
+>>>>>>> 307f42177efdbf0a45719e9999af8ed1c6080454
     }
   }
 }
