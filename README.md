@@ -64,6 +64,6 @@ Microsoft.EntityFrameworkCore.Tools
 #### * Deploy/host a application with Visual Studio to Azure web apps.
 
 ### ScreenShots
-![ScreenShot](img/ContactList.png)
+![ScreenShot](../img/ContactList.png)
 
-![ScreenShot](img/ContactActions.png)
+![ScreenShot](../img/ContactActions.png)
