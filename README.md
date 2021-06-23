@@ -1,5 +1,6 @@
 # Contact Management Application
-Contact Management Application using ASP.NET Core Web API 3.1, Bootstrap and Visual Studio. 
+
+Contact Management Application is a production ready application for maintaining contact information using ASP.NET Core Web API 3.1, Bootstrap and Visual Studio. 
 
 ## Visual Code
 
