@@ -71,10 +71,7 @@ namespace ContactManagement
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
-            {
-                //endpoints.MapControllerRoute(
-                //   name: "default",
-                //   pattern: "{controller=Demo}/{action=ShowGrid}/{id?}");
+            {              
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Contact}/{action=Index}/{id?}");

@@ -93,7 +93,7 @@ namespace ContactManagement.Controllers.Api
 
 
         [HttpDelete("{id}")]
-        [Route("deleteContact")]
+        [Route("deleteContact/{id}")]
         public IActionResult Delete(int id)
         {
             var contact = _context.Contacts.FirstOrDefault(t => t.Id == id);

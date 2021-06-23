@@ -7,9 +7,9 @@
 <h4>Update Contact</h4>
 <hr />
 <div>
-    @using (Html.BeginForm("Update", "Contact", FormMethod.Post))
+    @using (Html.BeginForm("Update", "Contact", FormMethod.Post, new { @class = "row" }))
     {
-        <form class="row" asp-action="Update">
+        <form asp-action="Update">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="col-md-6">
                 <div class="form-group">
@@ -47,9 +47,9 @@
 
             </div>
 
-            <div class="col-xs-3">
-                <button type="submit" value="Submit" class="btn btn-primary float-right">
-                    Update
+            <div class="col-lg-12">
+                <button type="submit" value="Submit" class="btn btn-success float-right">
+                        Update
                 </button>
             </div>
         </form>
