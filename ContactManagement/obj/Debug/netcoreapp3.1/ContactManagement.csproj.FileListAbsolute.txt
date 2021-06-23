@@ -1005,3 +1005,4 @@ E:\Personal\Contact-Management\Contact-Management\ContactManagement\obj\Debug\ne
 E:\Personal\Contact-Management\Contact-Management\ContactManagement\obj\Debug\netcoreapp3.1\ContactManagement.genruntimeconfig.cache
 E:\Personal\Contact-Management\Contact-Management\ContactManagement\obj\Debug\netcoreapp3.1\ContactManagement.csproj.AssemblyReference.cache
 E:\Personal\Contact-Management\Contact-Management\ContactManagement\obj\Debug\netcoreapp3.1\Razor\Views\Contact\Update.cshtml.g.cs
+E:\Project\Contact-Management\Contact-Management\ContactManagement\obj\Debug\netcoreapp3.1\Razor\Views\Contact\Update.cshtml.g.cs

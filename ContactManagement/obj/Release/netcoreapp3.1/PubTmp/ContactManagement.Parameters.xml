@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="contactmanagementevolent" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^E:\\Project\\Contact-Management\\Contact-Management\\ContactManagement\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>
