@@ -7,6 +7,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAhOOsQseG9kGGpfdRKkRRUgAAAAACAAAAAAAQZgAAAAEAACAAAABM3v4bgpeevJ8wUDhIPmXs5/qCwtC0tSbAwh2sDvomKgAAAAAOgAAAAAIAACAAAAC1SlqXMfTLGKV3Z6Cps6xno/1wB6UGPD9CLP0trL0qyoAAAAB8mDQGR2SC2drR9Y3PtdZD18ax7Jj2pCm12Ro7M3x3NlvcTWzGRJ1F8cvbRNfMxquazB3tGGyaypi5LC96jRpHB8cAoCdpYqIfCoL792WwLBbxPGT1O9gf0jG0PLEnAedf+WXkg+e/gJLG9tnXK4ypGxf/m7zKYEJPtOlfdNG7BUAAAABSf1ooM0YAVql/H1VWZiyldrmE9o2TUPJ1xsnpTsAH7BgInROMrxPMAKBPfxS9sO5i63WcgDmmXl6rVXEHqBTV</EncryptedPassword>
-    <History>True|2021-06-23T16:35:03.7232809Z;True|2021-06-23T19:19:03.6660939+04:00;</History>
+    <History>False|2021-06-24T07:27:09.9313991Z;False|2021-06-24T11:11:28.1570479+04:00;False|2021-06-24T11:05:53.7680109+04:00;True|2021-06-23T20:35:03.7232809+04:00;True|2021-06-23T19:19:03.6660939+04:00;</History>
   </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="ContactManagement.Models.ContactAppContext">
+      <Value>Server=tcp:hafisazureserver.database.windows.net,1433%3bInitial Catalog=ContactDB%3bPersist Security Info=False%3bUser ID=NTLGN%3bPassword=Contact%409009%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
 </Project>
