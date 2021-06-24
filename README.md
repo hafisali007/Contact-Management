@@ -61,7 +61,7 @@ Microsoft.EntityFrameworkCore.Tools
 
 #### * Continuoes Integration (CI) done to git by commiting changes in codes.
 
-#### * Continuoes Integration (CD) Deploy/host a application with Visual Studio to Azure web apps.
+#### * Continuoes Developement (CD) Deploy/host a application with Visual Studio to Azure web apps.
 
 ### ScreenShots
 ![ScreenShot](img/ContactList.png)
