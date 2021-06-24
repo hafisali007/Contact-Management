@@ -59,9 +59,9 @@ Microsoft.EntityFrameworkCore.Tools
 
 #### * Develop the contact form & list component using Bootstrap Style that will consume Web API which we have created in above
 
-#### * Continuoes Integration done to git by commiting changes in codes.
+#### * Continuoes Integration (CI) done to git by commiting changes in codes.
 
-#### * Deploy/host a application with Visual Studio to Azure web apps.
+#### * Continuoes Integration (CD) Deploy/host a application with Visual Studio to Azure web apps.
 
 ### ScreenShots
 ![ScreenShot](img/ContactList.png)
