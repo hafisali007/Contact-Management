@@ -13,6 +13,6 @@
     </WebStackScaffolding_LayoutPageFile>
     <WebStackScaffolding_DbContextTypeFullName>ContactManagement.Models.ContactAppContext</WebStackScaffolding_DbContextTypeFullName>
     <ShowAllFiles>false</ShowAllFiles>
-    <NameOfLastUsedPublishProfile>E:\Personal\Contact-Management\Contact-Management\ContactManagement\Properties\PublishProfiles\contactmanagementevolent - Web Deploy1.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>E:\Personal\Contact-Management\Contact-Management\.github\workflows\contactmanagementevolent.yml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using ContactManagement.Models;
+using ContactManagement.Controllers;
 
 namespace ContactManagement
 {
@@ -28,6 +29,7 @@ namespace ContactManagement
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+        
             services.AddDbContext<ContactAppContext>(opts => opts.
             UseSqlServer(Configuration["ConnectionString:ContactDB"],
             sqlServerOptionsAction: sqlOptions =>
@@ -40,13 +42,14 @@ namespace ContactManagement
             services.AddControllersWithViews();
             services.AddControllers();
             services.AddMvc().AddRazorRuntimeCompilation();
+    
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
 
-            if (env.IsProduction())
+            if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
@@ -56,7 +59,7 @@ namespace ContactManagement
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            app.UseMiddleware<Middleware>();
             app.UseStaticFiles();
             app.UseCors(options =>
             {
