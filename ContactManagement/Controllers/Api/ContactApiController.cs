@@ -12,8 +12,7 @@ namespace ContactManagement.Controllers.Api
     [ApiController]
     public class ContactApiController : ControllerBase
     {
-
-        private readonly ContactAppContext _context;
+                private readonly ContactAppContext _context;
 
         // initiate database context
         public ContactApiController(ContactAppContext context)
